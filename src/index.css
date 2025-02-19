@@ -1,0 +1,135 @@
+body {
+  background-color: #181a1b;
+
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.spotify-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #333;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.spotify-button.expanded {
+  width: 300px;
+  height: 150px;
+  background: linear-gradient(217deg, rgba(15, 15, 15, 0.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(20deg, rgba(68, 0, 255, 0.8), rgba(0,255,0,0) 70.71%);
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.spotify-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.player-container {
+  color: white;
+  text-align: center;
+}
+
+.song-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.progress-container {
+  width: 250px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar {
+  height: 100%;
+  background: white;
+  width: 0;
+  border-radius: 5px;
+}
+
+.progress-handle {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.controls {
+  display: flex;
+  justify-content: center; /* Centrer les boutons */
+  align-items: center; /* Alignement vertical centré */
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px; /* Utiliser une taille uniforme pour les emojis */
+  margin: 0 10px; /* Espacement fixe entre les boutons */
+  cursor: pointer;
+  outline: none; /* Enlever le contour par défaut */
+  width: 40px; /* Largeur fixe */
+  height: 40px; /* Hauteur fixe */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrer les emojis */
+}
+
+.controls button:hover {
+  opacity: 0.8;
+}
+
+.volume-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.volume-container span {
+  margin-right: 10px;
+}
+
+.volume-container input {
+  flex: 1;
+}
+
+/* react */
+@media only screen and (max-width: 1000px) {
+  .spotify-button {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .spotify-button {
+    display: none;
+  }
+}
